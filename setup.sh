@@ -11,3 +11,6 @@ if [ "$?" = "0" ] ; then
 else
    sudo sed -i 's/\[General\]/[General]\nEnable=Source,Sink,Media/' /etc/bluetooth/main.conf
 fi
+
+# Set Class = 0x00041C
+sudo sed -i 's/#*Class *=.*/Class = 0x00041C/' /etc/bluetooth/main.conf
