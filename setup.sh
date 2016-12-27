@@ -14,3 +14,6 @@ fi
 
 # Set Class = 0x00041C
 sudo sed -i 's/#*Class *=.*/Class = 0x00041C/' /etc/bluetooth/main.conf
+
+# Set resample-method = trivial
+sudo sed -i -r 's/^.*sample-method *=.*/sample-method = trivial/' /etc/pulse/daemon.conf
